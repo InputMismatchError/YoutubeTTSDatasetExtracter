@@ -82,6 +82,7 @@ def convert_to_mp3(input_file, output_file):
         '-codec:a', 'libmp3lame', output_file
     ]
     subprocess.run(ffmpeg_command)
+    os.remove(input_file)
     # Convert the audio file to MP3
 
 # Function to split the audio using ffmpeg and save as WAV
